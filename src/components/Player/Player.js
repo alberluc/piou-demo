@@ -24,7 +24,7 @@ function Player({match}) {
         throw new Error(`La video ${match.params.key} n'a pas d'actions !`)
     }
 
-    async function onVideoChange() {
+    async function playVideo() {
         try {
             setNeedUserInteract(false)
             await videoRef.current.play()
@@ -41,12 +41,14 @@ function Player({match}) {
         setIsVideoEnded(true)
     }
 
-    useEffect(() => {
+    function onChangeVideo() {
         setIsLoading(true)
         setIsVideoEnded(false)
         setProgress(0)
-        onVideoChange()
-    }, [match.params.key])
+        playVideo()
+    }
+
+    useEffect(onChangeVideo, [match.params.key])
 
     return (
         <div className="Player">
@@ -77,7 +79,7 @@ function Player({match}) {
             )}
             {!isLoading && needUserInteract && (
                 <Modal>
-                    <Button onClick={onVideoChange}>Commencer</Button>
+                    <Button onClick={playVideo}>Commencer</Button>
                 </Modal>
             )}
         </div>
