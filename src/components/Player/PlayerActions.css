@@ -1,0 +1,24 @@
+.PlayerActions {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 100px;
+    background-color: #fff;
+    border-radius: 3px;
+    transform: translate(-50%, -50%);
+    list-style: none;
+}
+
+.PlayerActions-list {
+    list-style: none;
+}
+
+.PlayerActions-item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.PlayerActions-title {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
