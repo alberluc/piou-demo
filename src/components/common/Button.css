@@ -14,3 +14,8 @@
 .Button:hover {
     opacity: 0.7;
 }
+
+.Button[disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+}

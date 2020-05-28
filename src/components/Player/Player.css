@@ -19,3 +19,25 @@
     height: 5px;
     background-color: red;
 }
+
+.Player-include-container {
+    display: flex;
+    transform: scale(1); /* 0.2 */
+    justify-content: center;
+    align-items: center;
+    /*flex: 0 0 200%;
+    height: 300%;
+    width: 100%;
+    box-sizing: content-box;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 274px;
+    background-size: 2000px;
+    background-image: url(/static/media/nichoir.f8c079f5.webp);*/
+}
+
+.Player-include {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+}

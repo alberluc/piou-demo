@@ -18,7 +18,6 @@ const KEYS = {
 
 export const VIDEOS = {
     [KEYS.SKY]: {
-        isFirst: true,
         mediaUrl: skyVideo,
         actionsKeys: [
             KEYS.SPORT,
@@ -26,7 +25,14 @@ export const VIDEOS = {
         ]
     },
     [KEYS.FOREST]: {
+        isFirst: true,
         mediaUrl: forestVideo,
+        includes: [
+            {
+                at: 2,
+                url: 'https://westfrstudio.ddns.net:80/#/'
+            }
+        ],
         actionsKeys: [
             KEYS.SKY,
             KEYS.SPORT
